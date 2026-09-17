@@ -1,32 +1,136 @@
-[
-  {
-    "id": 1,
-    "owner": "octocat",
-    "repo": "Hello-World",
-    "name": "Hello-World",
-    "description": "My first repository on GitHub!",
-    "stars": 1500,
-    "url": "https://github.com/octocat/Hello-World",
-    "starred_at": "2026-09-10T12:34:56Z"
-  },
-  {
-    "id": 2,
-    "owner": "nodejs",
-    "repo": "node",
-    "name": "node",
-    "description": "Node.js JavaScript runtime",
-    "stars": 95000,
-    "url": "https://github.com/nodejs/node",
-    "starred_at": "2026-09-12T08:00:00Z"
-  },
-  {
-    "id": 3,
-    "owner": "denoland",
-    "repo": "deno",
-    "name": "deno",
-    "description": "A modern runtime for JavaScript and TypeScript",
-    "stars": 80000,
-    "url": "https://github.com/denoland/deno",
-    "starred_at": "2026-09-14T20:15:30Z"
+:root {
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --border: #e1e4e8;
+  --text: #24292e;
+  --muted: #586069;
+  --link: #0366d6;
+  --error: #b31d28;
+  --shadow: rgba(27, 31, 35, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: min(100%, 800px);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+#starred-list {
+  min-height: 1rem;
+}
+
+.starred-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.starred-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid #eaecef;
+}
+
+.starred-item:first-child {
+  border-top: none;
+}
+
+.repo-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.repo-name {
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.repo-name:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.repo-desc {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.meta {
+  flex-shrink: 0;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.star-count,
+.starred-date {
+  white-space: nowrap;
+}
+
+.empty,
+.error {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--error);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
   }
-]
+
+  .starred-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .meta {
+    text-align: left;
+  }
+}

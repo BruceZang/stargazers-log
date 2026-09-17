@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-      <h1>Starred repositories</h1>
-      <div id="starred-list" aria-live="polite"></div>
-    </div>
+    <main id="main-content" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Starred repositories</h1>
+        <div id="starred-list" role="status" aria-live="polite" aria-atomic="true"></div>
+      </div>
+    </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
