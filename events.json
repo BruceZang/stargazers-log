@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "owner": "octocat",
+    "repo": "Hello-World",
+    "name": "Hello-World",
+    "description": "My first repository on GitHub!",
+    "stars": 1500,
+    "url": "https://github.com/octocat/Hello-World",
+    "starred_at": "2026-09-10T12:34:56Z"
+  },
+  {
+    "id": 2,
+    "owner": "nodejs",
+    "repo": "node",
+    "name": "node",
+    "description": "Node.js JavaScript runtime",
+    "stars": 95000,
+    "url": "https://github.com/nodejs/node",
+    "starred_at": "2026-09-12T08:00:00Z"
+  },
+  {
+    "id": 3,
+    "owner": "denoland",
+    "repo": "deno",
+    "name": "deno",
+    "description": "A modern runtime for JavaScript and TypeScript",
+    "stars": 80000,
+    "url": "https://github.com/denoland/deno",
+    "starred_at": "2026-09-14T20:15:30Z"
+  }
+]

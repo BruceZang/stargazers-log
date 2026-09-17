@@ -1,11 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>stargazers log</title>
-  </head>  
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Starred repositories</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
   <body>
-    <h1>stargazers log</h1>
-    <p>A log of the repositories I have starred.</p>
+    <main id="main-content" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Starred repositories</h1>
+        <div id="starred-list" role="status" aria-live="polite" aria-atomic="true"></div>
+      </div>
+    </main>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
